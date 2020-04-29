@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Enter inline DTD here -->
+<!DOCTYPE root [
+        <!ELEMENT root (doctors, clients, departments)>
+        <!ELEMENT doctors (doctor+)>
+        <!ELEMENT doctor (name, firstName, specialty, phone, Department, salary)>
+        <!ATTLIST doctor
+          doctor_id CDATA #REQUIRED>
+       	          <!ELEMENT name (#PCDATA)>
+	          <!ELEMENT firstName (#PCDATA)>
+	          <!ELEMENT specialty (#PCDATA)>
+	          <!ELEMENT phone (#PCDATA)>
+	          <!ELEMENT Departmaent (#PCDATA)>
+	          <!ELEMENT salary (#PCDATA)>
+	<!ELEMENT clients (client+)>
+        <!ELEMENT client (name, firstName, phone_client)>
+        <!ATTLIST client
+          client_id CDATA #REQUIRED>
+       	          <!ELEMENT name (#PCDATA)>
+	          <!ELEMENT firstName (#PCDATA)>
+	          <!ELEMENT phone_client (#PCDATA)>
+        <!ELEMENT departments (department+)>
+        <!ELEMENT department (name_department, number_of_employees, phone_department, cabinets)+>
+        <!ELEMENT name_department (#PCDATA)>
+        <!ELEMENT number_of_employees (#PCDATA)>
+        <!ELEMENT cabinets (#PCDATA)>
+        <!ELEMENT phone_department (#PCDATA)>
+
+           ]>
+<root>
+<doctors>
+		<doctor doctor_id="1">
+			<name>Иван</name>
+			<firstName>Хлопков</firstName>
+			<specialty>хлопатель по плечу</specialty>
+			<phone> 88003535 </phone>
+			<Department>Стоматологический</Department>
+			<salary>Сколько?</salary>
+		</doctor>
+		<doctor doctor_id ="2">
+                        <name>Иван</name>
+			<firstName>Шлепков</firstName>
+			<specialty>Шлёпатель по плечу</specialty>
+			<phone> 89003535 </phone>
+			<Department>Стоматологический</Department>
+			<salary>100тыс. долларов</salary>
+                </doctor>
+ 		<doctor doctor_id ="3">
+                        <name>Пётр</name>
+			<firstName>Плевков</firstName>
+			<specialty>Петрит</specialty>
+			<phone> 81003535 </phone>
+			<Department>Инфекционный</Department>
+			<salary>ищи дураков, я работаю за рубли</salary>
+                </doctor>
+</doctors>
+<clients>
+         <client client_id="1234">
+                 <name>Иван</name>
+                 <firstName>Дурак</firstName>
+                 <phone_client>880553535</phone_client>
+         </client>
+</clients>
+<departments>
+<department>
+            <name_department>Стоматолгический</name_department>
+            <number_of_employees>1</number_of_employees>
+            <phone_department>789081028</phone_department>
+            <cabinets>23каб.</cabinets>
+</department>
+</departments>
+</root>
+
+

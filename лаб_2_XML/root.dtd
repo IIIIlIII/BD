@@ -1,0 +1,27 @@
+<!DOCTYPE root [
+        <!ELEMENT root (doctors, clients, departments)>
+        <!ELEMENT doctors (doctor+)>
+        <!ELEMENT doctor (name, firstName, specialty, phone, Department, salary)>
+        <!ATTLIST doctor
+          doctor_id CDATA #REQUIRED>
+       	          <!ELEMENT name (#PCDATA)>
+	          <!ELEMENT firstName (#PCDATA)>
+	          <!ELEMENT specialty (#PCDATA)>
+	          <!ELEMENT phone (#PCDATA)>
+	          <!ELEMENT Departmaent (#PCDATA)>
+	          <!ELEMENT salary (#PCDATA)>
+	<!ELEMENT clients (client+)>
+        <!ELEMENT client (name, firstName, phone_client)>
+        <!ATTLIST client
+          client_id CDATA #REQUIRED>
+       	          <!ELEMENT name (#PCDATA)>
+	          <!ELEMENT firstName (#PCDATA)>
+	          <!ELEMENT phone_client (#PCDATA)>
+        <!ELEMENT departments (department+)>
+        <!ELEMENT department (name_department, number_of_employees, phone_department, cabinets)+>
+        <!ELEMENT name_department (#PCDATA)>
+        <!ELEMENT number_of_employees (#PCDATA)>
+        <!ELEMENT cabinets (#PCDATA)>
+        <!ELEMENT phone_department (#PCDATA)>
+
+           ]>
